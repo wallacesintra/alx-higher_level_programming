@@ -5,7 +5,5 @@ def search_replace(my_list, search, replace):
     search : the element to replace in the list
     replace : the new element
     '''
-    new = my_list.copy()
-    i = new.index(search)
-    new.insert(i, replace)
-    return new
+    new = list(map(lambda x: replace if x == search else x, my_list))
+    return (new)
