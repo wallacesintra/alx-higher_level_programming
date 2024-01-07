@@ -50,7 +50,6 @@ Passing a string as the size of the square
     TypeError: size must be an integer
 
 
-
 Missing argument
 
    >>> print_square()
