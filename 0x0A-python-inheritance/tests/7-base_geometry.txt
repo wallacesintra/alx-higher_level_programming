@@ -9,13 +9,14 @@ Import the class:
 
     >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
+Now test it:
 
 correct cases
 
     >>> bg = BaseGeometry()
     >>> bg.integer_validator("", 22)
 
-    >>> bg.integer_validator("Wallace", 45)
+    >>> bg.integer_validator("CHINEZE", 45)
 
     >>> bg.integer_validator("my_int", 12)
 
