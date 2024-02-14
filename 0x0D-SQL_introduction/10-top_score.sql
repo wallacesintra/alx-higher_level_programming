@@ -1,4 +1,4 @@
---lists all records of the table
---display both the score and the name (in this order)
---Records should be ordered by score (top first)
+-- lists all records of the table
+-- display both the score and the name
+-- descending order by score
 SELECT score, name FROM second_table ORDER BY score DESC;
