@@ -1,6 +1,6 @@
 -- create a database(hbtn_0d_usa)
 -- create a table(states)
--- declare an id and name for the table
+-- declare an id and name-table
 
 CREATE IF NOT EXISTS DATABASE hbtn_0d_usa;
 
