@@ -1,4 +1,4 @@
-## creating a new user
+# **Creating a new user**
 root user has all priviledges
 it’s best to avoid using this account outside of administrative functions.
 
@@ -27,7 +27,7 @@ it’s best to avoid using this account outside of administrative functions.
 
 
 
-## Granting Priviledges
+# **Granting Priviledges**
 
 Priviledges: SELECT, INSERT, UPDATE, DELETE, ALL PRIVILEDGES
 
@@ -37,7 +37,7 @@ Priviledges: SELECT, INSERT, UPDATE, DELETE, ALL PRIVILEDGES
 **granting specific priviledges on a database**
 `GRANT SELECT, INSERT, UPDATE ON database_name.table_name TO 'username'@'hostname';`
 
-## Revoking priviledges
+# **Revoking priviledges**
 
 **revoking all priviledges on a database**
 `REVOKE ALL PRIVILEGES ON database_name.* FROM 'username'@'hostname';`
@@ -59,7 +59,7 @@ Make sure to use FLUSH PRIVILEGES; after granting or revoking privileges to ensu
 
 
 
-## MySQL Constraints
+# **MySQL Constraints**
 Constraints are placed on columns or tables, they limit the data that can be inserted into the tables.
 
 **NOT NULL constraint**
@@ -96,5 +96,17 @@ SET can have zero/more values, each of the values must be chosen from a list of 
 `CREATE TABLE Students(Id INTEGER, Name VARCHAR(55), Certificates SET('A1', 'A2', 'A3', 'C1'))`
 `INSERT INTO Students VALUES(2, 'Jane', 'A1,B1,A2');`
 `INSERT INTO Students VALUES(3, 'Mark', 'A1,A2,D1,D2');`
+
+
+
+# **SQL subqueries**
+Subquery - allows using result of a query as part of another query.
+
+`        SELECT cFirstName, cLastName, cZipCode
+        FROM customers
+        WHERE cZipCode =        
+          (SELECT cZipCode
+           FROM customers
+           WHERE cFirstName = 'Wayne' AND cLastName = 'Dick');`
 
 
