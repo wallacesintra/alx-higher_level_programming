@@ -1,6 +1,6 @@
 -- Script that lists all shows and all genres
--- The list should display tv_shows.title, tv_genres.name
--- The list should be sorted by tv_shows.title and tv_genres.name
+-- display tv_shows.title, tv_genres.name
+-- be sorted by tv_shows.title and tv_genres.name
 -- If a show doesn't have a genre, display NULL
 SELECT tv_shows.title, tv_genres.name
 FROM tv_shows
