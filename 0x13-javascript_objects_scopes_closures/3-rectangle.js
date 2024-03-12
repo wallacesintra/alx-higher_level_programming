@@ -12,18 +12,18 @@ class Rectangle {
     }
   }
 
-    print () {
-        let i;
-        let x;
-        let str = '';
-        for (i = 0; i < this.height; i++) {
-        for (x = 0; x < this.width; x++) {
-            str += 'X';
-        }
-        console.log(str);
-        str = '';
-        }
+  print () {
+    let i;
+    let x;
+    let str = '';
+    for (i = 0; i < this.height; i++) {
+      for (x = 0; x < this.width; x++) {
+        str += 'X';
+      }
+      console.log(str);
+      str = '';
     }
+  }
 }
 
 module.exports = Rectangle;
