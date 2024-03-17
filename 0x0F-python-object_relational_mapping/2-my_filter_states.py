@@ -6,21 +6,21 @@ where name matches the argument.
 
 
 import MySQLdb
-import sys
+from sys import argv
 
 if __name__ == "__main__":
     db = MySQLdb.connect(
         host="localhost",
         port=3306,
-        user=sys.argv[1],
-        passwd=sys.argv[2],
-        db=sys.argv[3],
+        user=argv[1],
+        passwd=argv[2],
+        db=argv[3],
         charset="utf8"
     )
     cursor = db.cursor()
     cursor.execute(
         "SELECT * FROM states WHERE name = '{}' ORDER BY id ASC"
-        .format(sys.argv[4])
+        .format(argv[4])
     )
     for row in cursor.fetchall():
         print(row)
