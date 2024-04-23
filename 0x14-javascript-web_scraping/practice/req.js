@@ -2,13 +2,13 @@
 
 const req = require('request');
 
-const url = "https://jsonplaceholder.typicode.com/posts/2"
+const url = 'https://jsonplaceholder.typicode.com/posts/2';
 
 req(url, (error, response, body) => {
-    if (error){
-        console.log(error);
-    } else {
-        console.log('code:', response.statusCode);
-        console.log(body);
-    }
-})
+  if (error) {
+    console.log(error);
+  } else {
+    console.log('code:', response.statusCode);
+    console.log(body);
+  }
+});
