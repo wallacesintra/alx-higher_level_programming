@@ -8,20 +8,20 @@ const req = require('request');
 const url = 'https://swapi-api.hbtn.io/api/films/' + process.argv[2];
 
 req(url, (error, response, body) => {
-    if (error) {
-        console.log(error);
-    } else {
-        console.log(JSON.parse(body).title);
+  if (error) {
+    console.log(error);
+  } else {
+    console.log(JSON.parse(body).title);
 
-        const characters = JSON.parse(body).characters;
-        for (const character of characters) {
-            req(character, (error, response, body) => {
-                if (error) {
-                    console.log(error);
-                } else {
-                    console.log(JSON.parse(body).name);
-                }
-            });
+    const characters = JSON.parse(body).characters;
+    for (const character of characters) {
+      req(character, (error, response, body) => {
+        if (error) {
+          console.log(error);
+        } else {
+          console.log(JSON.parse(body).name);
         }
+      });
     }
+  }
 });
