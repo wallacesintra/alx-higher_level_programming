@@ -2,7 +2,7 @@
 
 const req = require('request');
 
-const url = "https://jsonplaceholder.typicode.com/posts/1"
+const url = "https://jsonplaceholder.typicode.com/posts/2"
 
 req(url, (error, response, body) => {
     if (error){
