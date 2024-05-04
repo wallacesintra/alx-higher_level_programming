@@ -7,6 +7,7 @@
  * and the reverse.
 */
 
+const $ = window.$;
 $('DIV#toggle_header').click(function () {
   $('header').toggleClass('red green');
 }
